@@ -7,23 +7,20 @@ A Safari extension that adds a copy-link button to the header of Google Chat's c
 - When the pane shows a thread, it copies the thread link: `https://chat.google.com/room/<space>/<thread>`
 - When the pane shows a space or DM, it copies that conversation's link: `https://chat.google.com/room/<space>` or `/dm/<id>`
 
+## Install
+
+Requires Xcode, signed in with your Apple ID.
+
+1. Run `./install.sh`
+2. Safari › Settings › Extensions › tick **Google Chat Copy Link**, and allow it on `chat.google.com`.
+
+To update, run `./install.sh` again and reload the Chat tab.
+
 ## Layout
 
 - `extension/`: the web extension (`manifest.json`, `content.js`, `content.css`, icons)
 - `GChat Copy Link/`: the Xcode wrapper app that Safari needs, generated with `safari-web-extension-converter`. It references the files in `extension/` directly.
-- `install.sh`: builds, signs and installs the app to `~/Applications` without launching it
-
-## Install
-
-```sh
-./install.sh
-```
-
-Then, once: Safari › Settings › Extensions › tick **Google Chat Copy Link** › Edit Websites › allow `chat.google.com` and `mail.google.com`.
-
-The build is signed with an Apple Development certificate (team `VNB5T45XDL`, set in the Xcode project). To build with another account, change `DEVELOPMENT_TEAM`. An unsigned build only runs while Develop › Allow Unsigned Extensions is on, and Safari turns that off on every restart.
-
-The wrapper app is a background app (`LSUIElement`), so it never shows in the Dock and doesn't need to be running.
+- `install.sh`: builds, signs and installs the app to `~/Applications`
 
 ## How it finds the link
 
