@@ -8,7 +8,7 @@ cd "${0:A:h}/GChat Copy Link"
 TEAM=$(security find-certificate -c "Apple Development" -p 2>/dev/null \
   | openssl x509 -noout -subject 2>/dev/null | sed -n 's/.*OU=\([A-Z0-9]*\).*/\1/p')
 if [[ -z "$TEAM" ]]; then
-  echo "No Apple Development certificate found. Open Xcode › Settings › Accounts, sign in with your Apple ID and create one."
+  echo "No Apple Development certificate found. Xcode › Settings › Accounts › add your Apple ID › Manage Certificates › + › Apple Development, then run this again."
   exit 1
 fi
 

@@ -9,7 +9,7 @@ A Safari extension that adds a copy-link button to the header of Google Chat's c
 
 ## Install
 
-Requires Xcode, signed in with your Apple ID.
+Requires Xcode and an Apple Development certificate. A free Apple ID is enough. To create one: Xcode › Settings › Accounts › add your Apple ID › Manage Certificates › **+** › Apple Development. Without it, Safari turns the extension off every time it restarts.
 
 1. Run `./install.sh`
 2. Safari › Settings › Extensions › tick **Google Chat Copy Link**, and allow it on `chat.google.com`.
