@@ -1,0 +1,44 @@
+/* Sized like the pane header's own icon buttons (full screen, close). */
+.gccl-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.gccl-btn:hover {
+  background: rgba(127, 127, 127, 0.16);
+}
+
+.gccl-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.gccl-btn.gccl-done {
+  color: #137333;
+}
+
+.gccl-btn.gccl-fail {
+  color: #c5221f;
+}
+
+@media (prefers-color-scheme: dark) {
+  .gccl-btn.gccl-done {
+    color: #81c995;
+  }
+  .gccl-btn.gccl-fail {
+    color: #f28b82;
+  }
+}
