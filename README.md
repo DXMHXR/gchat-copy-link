@@ -2,6 +2,8 @@
 
 A Safari extension that adds a copy-link button to the header of Google Chat's conversation pane, next to "Open in full screen". In split-pane mode you can copy a link without maximizing first.
 
+![The 🔗 button in the conversation pane header, next to expand and close](docs/header.png)
+
 - When the pane shows a thread, it copies the thread link: `https://chat.google.com/room/<space>/<thread>`
 - When the pane shows a space or DM, it copies that conversation's link: `https://chat.google.com/room/<space>` or `/dm/<id>`
 
